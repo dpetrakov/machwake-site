@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Machwake — no record at this path</title>
+<meta name="robots" content="noindex">
+
+<link rel="icon" href="assets/icons/favicon.ico" sizes="48x48">
+<link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#06182A">
+
+<link rel="stylesheet" href="styles.css">
+<style>
+  .four04{
+    font-family:var(--f-mono);
+    font-size:clamp(11px,1.5vw,13px);
+    font-weight:600;
+    letter-spacing:.2em;
+    text-transform:uppercase;
+    color:var(--chalk-dim);
+    margin:clamp(26px,5vh,40px) 0 0;
+  }
+  .four04 b{color:var(--sodium);font-weight:600}
+  .back{
+    /* main is a flex column, so an inline-block still stretches: the rule
+       below is what keeps the underline the width of the words. */
+    align-self:flex-start;
+    margin-top:22px;
+    font-family:var(--f-mono);
+    font-size:12px;
+    letter-spacing:.12em;
+    color:var(--chalk);
+    text-decoration:none;
+    border-bottom:1px solid rgba(230,237,243,.3);
+  }
+  .back:hover{border-bottom-color:var(--chalk)}
+  .back:focus-visible{outline:2px solid var(--sodium);outline-offset:3px}
+</style>
+</head>
+<body>
+
+<main>
+  <h1 class="wordlock">
+    <span class="wordlock__mark" aria-hidden="true">
+      <svg viewBox="0 0 555 495" shape-rendering="geometricPrecision">
+        <path fill="currentColor" d="M 475.03 168.05 A 79.50 79.50 0 0 1 387.25 102.00 L 382.00 102.00 L 269.00 286.00 L 280.00 101.00 L 182.00 99.00 L 24.00 467.00 L 119.00 435.00 L 199.00 236.00 L 200.00 408.00 L 258.00 408.00 L 377.00 231.00 L 334.00 407.00 L 409.00 408.00 Z"/>
+        <circle class="node" cx="465.7" cy="89.1" r="63.55"/>
+      </svg>
+    </span><span class="wordlock__word"><span class="sr-only">M</span>achwake</span>
+  </h1>
+
+  <p class="four04"><b>404</b> · No record at this path.</p>
+
+  <a class="back" href="/">Back to m6e.org</a>
+</main>
+
+<footer>
+  <span><code>m6e</code> — the Machwake CLI</span>
+  <span>© 2026 Dmitry Petrakov</span>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,12 @@
+.DS_Store
+*.log
+
+# Local only, never published. The runbook names internal paths and reasoning
+# that belong in the private repository, not on a public page's repo.
+DEPLOY-RUNBOOK.md
+motion-lab.html
+tunnel-lab-boot.js
+
+# Editor and OS noise
+.vscode/
+.idea/

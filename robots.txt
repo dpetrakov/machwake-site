@@ -1,0 +1,33 @@
+# The page is public and meant to be findable by name. It is not announced
+# anywhere, so being indexed is the only way it is found at all.
+User-agent: *
+Allow: /
+
+# Answer engines are named explicitly rather than left to the wildcard, so the
+# decision is visible: this project would rather be described accurately by
+# them than absent from them. Reverse it by changing Allow to Disallow.
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+Sitemap: https://m6e.org/sitemap.xml

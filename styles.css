@@ -1,0 +1,211 @@
+/* Machwake — m6e.org
+   One screen. No framework, no build step: the right tool for the size of
+   the job is itself part of what this page says. */
+
+@font-face{font-family:Anybody;src:url(assets/fonts/anybody-var-latin.woff2)format('woff2');font-weight:100 900;font-display:swap}
+@font-face{font-family:'Plex Sans';src:url(assets/fonts/plex-sans-var-latin.woff2)format('woff2');font-weight:400 700;font-display:swap}
+@font-face{font-family:'Plex Mono';src:url(assets/fonts/plex-mono-400-latin.woff2)format('woff2');font-weight:400;font-display:swap}
+@font-face{font-family:'Plex Mono';src:url(assets/fonts/plex-mono-600-latin.woff2)format('woff2');font-weight:600;font-display:swap}
+
+:root{
+  /* The machine is cold. The human is warm. Nothing else is warm. */
+  --tunnel:#06182A;
+  --chalk:#E6EDF3;
+  --chalk-dim:#7D93A6;
+  --sodium:#FFAE1A;
+  --edge:rgba(230,237,243,.045);
+  --edge-major:rgba(230,237,243,.085);
+  --shear:-16deg;
+
+  --f-display:Anybody,system-ui,sans-serif;
+  --f-body:'Plex Sans',system-ui,sans-serif;
+  --f-mono:'Plex Mono',ui-monospace,monospace;
+}
+
+*{box-sizing:border-box}
+
+/* The mark is the letter M, so the M is never typed — which would leave the
+   page's only h1 reading "achwake" to anything that parses text rather than
+   looks at it. This supplies the letter to parsers and screen readers without
+   putting it on screen twice. */
+.sr-only{
+  position:absolute;width:1px;height:1px;
+  padding:0;margin:-1px;overflow:hidden;
+  clip-path:inset(50%);white-space:nowrap;border:0;
+}
+
+body{
+  margin:0;
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  background-color:var(--tunnel);
+  /* A drafting lattice raked to the mark's own 16°. The shear is what keeps
+     this off the right angle that terminal aesthetics live on. */
+  background-image:
+    repeating-linear-gradient(74deg,var(--edge-major) 0 1px,transparent 1px 128px),
+    repeating-linear-gradient(0deg, var(--edge-major) 0 1px,transparent 1px 128px),
+    repeating-linear-gradient(74deg,var(--edge) 0 1px,transparent 1px 32px),
+    repeating-linear-gradient(0deg, var(--edge) 0 1px,transparent 1px 32px);
+  color:var(--chalk);
+  font:400 16px/1.6 var(--f-body);
+  -webkit-font-smoothing:antialiased;
+}
+
+/* The test section sits between the lattice and the type. It is positioned in
+   document space, not the viewport, so it scrolls with the page — and once its
+   script takes over it draws the lattice itself and switches the gradients
+   above off, so that stamped nodes can land on real crossings. */
+#tunnel{position:absolute;top:0;left:0;width:100%;z-index:0;pointer-events:none}
+.tunnel-on body{background-image:none}
+main,footer{position:relative;z-index:1}
+
+main{
+  flex:1;
+  width:100%;
+  max-width:1080px;
+  margin:0 auto;
+  padding:clamp(40px,9vh,96px) clamp(20px,5vw,56px) 40px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+/* ── wordlock ────────────────────────────────────────────────────────────
+   The mark is not beside the name — it IS the name's M, and only "achwake"
+   is typed. Every number here is measured; see the brand book before
+   changing one. */
+.wordlock{display:flex;align-items:baseline;--h:clamp(56px,11vw,116px)}
+.wordlock__mark{
+  flex:0 0 auto;
+  width:calc(var(--h) * 1.1212);
+  height:var(--h);
+  margin-bottom:calc(var(--h) * -.1758);
+  margin-right:calc(var(--h) * -.320);
+  color:var(--chalk);
+}
+.wordlock__mark svg{display:block;width:100%;height:100%}
+.wordlock__mark .node{fill:var(--sodium)}
+.wordlock__word{
+  font-family:var(--f-display);
+  font-weight:800;
+  font-variation-settings:'wdth' 125;
+  font-size:calc(var(--h) / 1.28);
+  letter-spacing:-.02em;
+  line-height:1;
+  display:inline-block;
+  transform:skewX(var(--shear));
+  transform-origin:0 100%;
+  position:relative;
+  bottom:calc(var(--h) * .17);
+}
+
+.tagline{
+  font-family:var(--f-mono);
+  font-size:clamp(11px,1.5vw,14px);
+  font-weight:500;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:var(--chalk-dim);
+  margin-top:6px;
+}
+.tagline b{color:var(--sodium);font-weight:700}
+
+.category{
+  font-size:clamp(17px,2.4vw,23px);
+  line-height:1.45;
+  max-width:24ch;
+  margin:clamp(26px,5vh,44px) 0 0;
+}
+
+/* ── manifesto ───────────────────────────────────────────────────────────
+   The product's invariant, verbatim. Not a feature list. */
+.manifesto{
+  margin:clamp(26px,5vh,42px) 0 0;
+  padding-left:20px;
+  border-left:2px solid var(--sodium);
+}
+.manifesto p{
+  margin:0 0 4px;
+  font-family:var(--f-display);
+  font-weight:800;
+  font-variation-settings:'wdth' 112;
+  font-size:clamp(15px,2vw,21px);
+  line-height:1.4;
+  display:block;
+  transform:skewX(var(--shear));
+  transform-origin:0 100%;
+}
+
+/* ── the two objects ─────────────────────────────────────────────────────
+   Enough to make the manifesto readable, and nothing more. */
+.objects{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:clamp(20px,4vw,44px);
+  margin:clamp(30px,6vh,52px) 0 0;
+  max-width:760px;
+}
+.objects h2{
+  font-family:var(--f-mono);
+  font-size:11px;
+  font-weight:600;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+  color:var(--sodium);
+  margin:0 0 8px;
+}
+.objects p{margin:0;font-size:14.5px;line-height:1.55;color:var(--chalk-dim)}
+
+/* ── status ──────────────────────────────────────────────────────────────
+   Said once, plainly. No "coming soon": an apologetic badge is the same
+   weakness in different clothes. */
+.status{
+  margin:clamp(30px,6vh,52px) 0 0;
+  font-family:var(--f-mono);
+  font-size:11px;
+  font-weight:600;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+  color:var(--chalk-dim);
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  border:1px solid rgba(230,237,243,.2);
+  padding:8px 14px;
+  align-self:flex-start;
+}
+.status::before{
+  content:"";
+  width:7px;height:7px;
+  background:var(--sodium);
+  transform:skewX(var(--shear));
+}
+
+footer{
+  width:100%;
+  max-width:1080px;
+  margin:0 auto;
+  padding:0 clamp(20px,5vw,56px) clamp(28px,5vh,44px);
+  display:flex;
+  justify-content:space-between;
+  align-items:baseline;
+  gap:18px;
+  flex-wrap:wrap;
+  font-family:var(--f-mono);
+  font-size:11px;
+  letter-spacing:.1em;
+  color:var(--chalk-dim);
+}
+footer a{color:var(--chalk-dim);text-decoration:none;border-bottom:1px solid rgba(230,237,243,.25)}
+footer a:hover{color:var(--chalk);border-bottom-color:var(--chalk)}
+footer a:focus-visible{outline:2px solid var(--sodium);outline-offset:3px}
+
+@media (max-width:640px){
+  .objects{grid-template-columns:1fr}
+  .category{max-width:none}
+  /* The repo URL is a single unbreakable mono token; left in a row it is the
+     one thing on the page that can force a horizontal scrollbar. */
+  footer{flex-direction:column;gap:10px}
+  footer a{overflow-wrap:anywhere}
+}

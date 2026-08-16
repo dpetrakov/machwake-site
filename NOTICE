@@ -1,0 +1,39 @@
+Machwake Site
+Copyright 2026 Dmitry Petrakov
+
+Licensed under the Apache License, Version 2.0 (the "License"); you may not
+use this file except in compliance with the License. You may obtain a copy of
+the License in the LICENSE file distributed with this work.
+
+--------------------------------------------------------------------------
+Third-party assets
+--------------------------------------------------------------------------
+
+The Apache-2.0 licence above covers the source of this site. It does not
+cover the bundled typefaces, which carry their own licence:
+
+  Anybody
+  Copyright 2020 The Anybody Project Authors
+  https://github.com/Etcetera-Type-Co/Anybody
+  SIL Open Font License 1.1 — assets/fonts/OFL-Anybody.txt
+
+  IBM Plex Sans, IBM Plex Mono
+  Copyright 2017 IBM Corp. with Reserved Font Name "Plex"
+  https://github.com/IBM/plex
+  SIL Open Font License 1.1 — assets/fonts/OFL-IBM-Plex-Sans.txt
+                              assets/fonts/OFL-IBM-Plex-Mono.txt
+
+The files in assets/fonts are latin subsets of the originals. See
+assets/fonts/README.md.
+
+--------------------------------------------------------------------------
+Trademarks
+--------------------------------------------------------------------------
+
+"Machwake" and the Machwake mark are trademarks of Dmitry Petrakov.
+
+As Apache-2.0 section 6 makes explicit, that licence grants no trademark
+rights. The mark and wordmark are published here because the site needs them
+to render, not as a grant of permission to use them. You may reproduce them
+when referring to this project; you may not use them for your own product,
+service, or organisation, or in any way that suggests endorsement.

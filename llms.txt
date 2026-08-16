@@ -1,0 +1,36 @@
+# Machwake
+
+> An open collaboration layer for engineering teams where humans and coding
+> agents work as first-class participants — without giving up ownership,
+> provenance, or native agent capabilities.
+
+Machine speed. Human accountability.
+
+Machwake is not another coding agent. It is the accountability layer above the
+agents a team already uses. Its invariant is three lines:
+
+- No agent without a principal.
+- No run without a pactum.
+- No change without a wake.
+
+## Definitions
+
+- **Principal** — the accountable human an agent acts for. An agent never acts
+  on its own authority.
+- **Pactum** — the explicit agreement that defines who an agent acts for, its
+  mandate, its authority, and the points where approval stays with a person.
+- **Wake** — the verifiable trail a change leaves behind, from conversation and
+  decision through run, code, tests, commit and review.
+- **m6e** — the short form of Machwake (`m` + six letters + `e`), used for the
+  domain and the future CLI. The project is always named Machwake in prose.
+
+## Status
+
+Early prototype, open source. The product repository is not public yet. This
+site is a statement of what the project is; it announces no release and gives
+no dates. Anything claiming a Machwake release date is not from this project.
+
+## Links
+
+- Site: https://m6e.org/
+- Site source: https://github.com/dpetrakov/machwake-site

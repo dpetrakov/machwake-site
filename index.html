@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Machwake — Machine speed. Human accountability.</title>
+<meta name="description" content="An open collaboration layer for engineering teams where humans and coding agents work as first-class participants — without giving up ownership, provenance, or native agent capabilities.">
+
+<link rel="icon" href="assets/icons/favicon.ico" sizes="48x48">
+<link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+<link rel="manifest" href="assets/icons/site.webmanifest">
+<meta name="theme-color" content="#06182A">
+
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+
+<!-- The wordlock is the largest paint on the page; the two families it needs
+     are fetched before the stylesheet asks for them. -->
+<link rel="preload" href="assets/fonts/anybody-var-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/plex-sans-var-latin.woff2" as="font" type="font/woff2" crossorigin>
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Machwake">
+<meta property="og:locale" content="en">
+<meta property="og:url" content="https://m6e.org/">
+<meta property="og:title" content="Machwake — Machine speed. Human accountability.">
+<meta property="og:description" content="The open collaboration layer for accountable human-agent engineering teams.">
+<meta property="og:image" content="https://m6e.org/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Machwake — machine speed, human accountability.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Machwake — Machine speed. Human accountability.">
+<meta name="twitter:description" content="The open collaboration layer for accountable human-agent engineering teams.">
+<meta name="twitter:image" content="https://m6e.org/assets/og.png">
+<meta name="twitter:image:alt" content="Machwake — machine speed, human accountability.">
+
+<!-- Stated once, in a form a machine can read without inferring it. Nothing
+     here claims more than the page does: no release, no availability, no
+     ratings. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://m6e.org/#website",
+      "url": "https://m6e.org/",
+      "name": "Machwake",
+      "description": "The open collaboration layer for accountable human-agent engineering teams.",
+      "inLanguage": "en",
+      "publisher": { "@id": "https://m6e.org/#author" }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://m6e.org/#author",
+      "name": "Dmitry Petrakov"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://m6e.org/#machwake",
+      "name": "Machwake",
+      "alternateName": "m6e",
+      "applicationCategory": "DeveloperApplication",
+      "url": "https://m6e.org/",
+      "author": { "@id": "https://m6e.org/#author" },
+      "license": "https://www.apache.org/licenses/LICENSE-2.0",
+      "description": "An open collaboration layer for engineering teams where humans and coding agents work as first-class participants, without giving up ownership, provenance, or native agent capabilities. Every agent acts for an accountable human under an explicit mandate, and every change keeps a verifiable trail from conversation and decision through run, code, tests, commit and review.",
+      "slogan": "Machine speed. Human accountability."
+    }
+  ]
+}
+</script>
+
+<link rel="canonical" href="https://m6e.org/">
+
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- The test section. Draws under the type, never over it; removes itself
+     entirely when the visitor asks for reduced motion. -->
+<canvas id="tunnel" aria-hidden="true"></canvas>
+
+<main>
+  <h1 class="wordlock">
+    <span class="wordlock__mark" aria-hidden="true">
+      <svg viewBox="0 0 555 495" shape-rendering="geometricPrecision">
+        <path fill="currentColor" d="M 475.03 168.05 A 79.50 79.50 0 0 1 387.25 102.00 L 382.00 102.00 L 269.00 286.00 L 280.00 101.00 L 182.00 99.00 L 24.00 467.00 L 119.00 435.00 L 199.00 236.00 L 200.00 408.00 L 258.00 408.00 L 377.00 231.00 L 334.00 407.00 L 409.00 408.00 Z"/>
+        <circle class="node" cx="465.7" cy="89.1" r="63.55"/>
+      </svg>
+    </span><span class="wordlock__word"><span class="sr-only">M</span>achwake</span>
+  </h1>
+
+  <p class="tagline">Machine speed. <b>Human accountability.</b></p>
+
+  <p class="category">The open collaboration layer for accountable
+    human&#8209;agent engineering teams.</p>
+
+  <div class="manifesto">
+    <p>No agent without a principal.</p>
+    <p>No run without a pactum.</p>
+    <p>No change without a wake.</p>
+  </div>
+
+  <div class="objects">
+    <section>
+      <h2>Pactum</h2>
+      <p>Defines who an agent acts for, its mandate, its authority, and where
+        approval stays with a person.</p>
+    </section>
+    <section>
+      <h2>Wake</h2>
+      <p>Preserves the verifiable trail from conversation and decision through
+        run, code, tests, commit and review.</p>
+    </section>
+  </div>
+
+  <p class="status">Open source · Early prototype</p>
+</main>
+
+<footer>
+  <span><code>m6e</code> — the Machwake CLI</span>
+  <span><a href="https://github.com/dpetrakov/machwake-site">github.com/dpetrakov/machwake-site</a></span>
+  <span>© 2026 Dmitry Petrakov</span>
+</footer>
+
+<script src="assets/tunnel.js" defer></script>
+
+</body>
+</html>
